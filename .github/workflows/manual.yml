@@ -16,6 +16,9 @@ on:
         # Input has to be provided for the workflow to run
         required: true
 
+env:
+  a : va
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -26,5 +29,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
+    - name: Show name
       run: echo "Hello ${{ github.event.inputs.name }}"
+      
+    - name: Show env var
+      run: echo "Hello ${{ env.a }}"
