@@ -17,8 +17,7 @@ on:
         required: true
 
 env:
-  a : va
-  b : ${{ env.a }}
+  a : "va"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
