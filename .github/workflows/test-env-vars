@@ -3,9 +3,11 @@
 name: test-env-vars
 
 # Controls when the workflow will run
-on:
+
+on: workflow_dispatch
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch
+
+  
 
 env:
   MY_ENV_NAME_A: "MY_ENV_VALUE_A"
