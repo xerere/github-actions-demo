@@ -27,7 +27,9 @@ jobs:
 
        # Runs a single command using the runners shell
       - name: show GITHUB_WORKSPACE var
-        run: echo $GITHUB_WORKSPACE
+        run: |
+          echo $GITHUB_WORKSPACE
+          cat $GITHUB_WORKSPACE/README.md
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
