@@ -6,6 +6,8 @@ name: Manual workflow
 # or API.
 on:
   push:
+     paths:
+      - '!**/*.md'
   
   workflow_dispatch:
     # Inputs the workflow accepts.
