@@ -19,10 +19,7 @@ on:
         default: ubuntu-latest
         # Input has to be provided for the workflow to run
         required: false
-      timeout_minutes:
-        description: The maximum number of minutes to let a job run before GitHub automatically cancels it. Default is 360
-        required: false
-        default: "360"
+      
       name:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Person to greet'
@@ -40,7 +37,7 @@ jobs:
   greet:
     # The type of runner that the job will run on
     runs-on: ${{ github.event.inputs.runs_on }}
-    timeout-minutes: ${{ github.event.timeout_minutes }}
+    timeout-minutes: 2
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
