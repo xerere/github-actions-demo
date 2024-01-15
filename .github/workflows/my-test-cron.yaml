@@ -1,0 +1,12 @@
+name: test cron
+
+on:
+  schedule:
+    - cron: 45 * * * *
+  
+jobs:
+  main:
+    runs-on: [ self-hosted, small, road-runner ]
+    steps:
+      - name: say hi
+        run: echo hi at $(date)
