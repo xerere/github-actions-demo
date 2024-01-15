@@ -1,8 +1,12 @@
 name: test cron
 
+#on:
+#  schedule:
+#    - cron: 45 * * * *
+
 on:
   schedule:
-    - cron: 45 * * * *
+    - cron:  '52 * * * *'
   
 jobs:
   main:
